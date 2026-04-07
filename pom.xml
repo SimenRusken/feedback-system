@@ -3,4 +3,26 @@
   <groupId>no.hvl.dat109</groupId>
   <artifactId>feedback-system</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+    <dependency>
+     <grouptId>org.postgresql</grouptId>
+     <artifactId>postgresql</artifactId>
+     <version>42.7.1</version>
+    </dependency>
+  
+  <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>6.4.0.Final</version>
+    </dependency>
+
+  
+  <dependency>
+    <groupId>jakarta.persistence</groupId>
+    <artifactId>jakarta.persistence-api</artifactId>
+    <version>3.1.0</version>
+</dependency>
+  </dependencies>
+ 
 </project>

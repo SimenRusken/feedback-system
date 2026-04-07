@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence>
+    <persistence-unit name="feedback">
+        <properties>
+            <property name="javax.persistence.jdbc.url" 
+                      value="jdbc:postgresql://HOST:PORT/DATABASE"/>
+            <property name="javax.persistence.jdbc.user" 
+                      value="DITT_BRUKERNAVN"/>
+            <property name="javax.persistence.jdbc.password" 
+                      value="DITT_PASSORD"/>
+        </properties>
+    </persistence-unit>
+</persistence>

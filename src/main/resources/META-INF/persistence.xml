@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="feedback">
+    
+    <class>no.hvl.dat109.Bruker</class>
+    <class>no.hvl.dat109.Student</class>
+    <class>no.hvl.dat109.Lærer</class>
+    <class>no.hvl.dat109.Forelesning</class>
+    <class>no.hvl.dat109.Tilbakemelding</class>
+    
+        <properties>
+        
+        <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+        
+        
+            <property name="javax.persistence.jdbc.url" 
+                      value="jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5433/h184946"/>
+            <property name="javax.persistence.jdbc.user" 
+                      value="h184946"/>
+            <property name="javax.persistence.jdbc.password" 
+                      value="qwqwqw"/>
+        </properties>
+    </persistence-unit>
+</persistence>
