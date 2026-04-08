@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    
     <persistence-unit name="feedback">
     
     <class>no.hvl.dat109.Bruker</class>
@@ -10,15 +11,16 @@
     
         <properties>
         
-        <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+        <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
         
         
-            <property name="javax.persistence.jdbc.url" 
+            <property name="jakarta.persistence.jdbc.url" 
                       value="jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5433/h184946"/>
-            <property name="javax.persistence.jdbc.user" 
+            <property name="jakarta.persistence.jdbc.user" 
                       value="h184946"/>
-            <property name="javax.persistence.jdbc.password" 
+            <property name="jakarta.persistence.jdbc.password" 
                       value="qwqwqw"/>
+                      
         </properties>
     </persistence-unit>
 </persistence>

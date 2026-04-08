@@ -6,7 +6,7 @@
   
   <dependencies>
     <dependency>
-     <grouptId>org.postgresql</grouptId>
+     <groupId>org.postgresql</groupId>
      <artifactId>postgresql</artifactId>
      <version>42.7.1</version>
     </dependency>
@@ -23,6 +23,21 @@
     <artifactId>jakarta.persistence-api</artifactId>
     <version>3.1.0</version>
 </dependency>
+
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
   </dependencies>
+  
+  <build>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+        </resource>
+    </resources>
+</build>
  
 </project>
