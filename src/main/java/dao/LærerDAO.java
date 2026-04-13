@@ -5,7 +5,7 @@ import java.util.List;
 import jakarta.persistence.EntityManager;
 import model.Lærer;
 
-public class LærerDAO implements Dao<Lærer> {
+public class LærerDAO {
 
 	
 	
@@ -27,32 +27,32 @@ public class LærerDAO implements Dao<Lærer> {
 		}
 	}
 	
-	@Override
+	
 	public void lagre(Lærer t) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public Lærer finnVedId(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public List<Lærer> finnAlle() {
 		EntityManager em = JPAUtil.getEntityManager();
 		return em.createQuery("SELECT l FROM lærer l",Lærer.class).getResultList();
 
 	}
 
-	@Override
+	
 	public void slett(Lærer t) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public void oppdater(Lærer t) {
 		// TODO Auto-generated method stub
 		

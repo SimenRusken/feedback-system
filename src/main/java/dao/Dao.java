@@ -2,6 +2,8 @@ package dao;
 
 import java.util.List;
 
+import model.Student;
+
 public interface Dao<T> {
 	
 	void lagre (T t);
@@ -9,5 +11,6 @@ public interface Dao<T> {
 	List<T> finnAlle();
 	void slett(T t);
 	void oppdater(T t);
+	void slettMedEpost(Student t);
 
 }
