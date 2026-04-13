@@ -13,9 +13,12 @@ public class StudentService {
 	
 
 	
-	public void registrer(String fornavn, String etternavn, String epost, String passord) {
-		Student student = new Student(fornavn, etternavn, epost, passord);
+	public Student registrer(String fornavn, String etternavn, String epost, String passord) {
+		
+		String hashedPassword = PasswordUtil.hashPassword(passord);
+		Student student = new Student(fornavn, etternavn, epost, hashedPassword);
 		studentDAO.lagre(student);
+		return student;
 		
 	}
 	
@@ -24,8 +27,13 @@ public class StudentService {
 		
 	}
 	
-	public Student loginn(String epost, String passord) {
-		return studentDAO.loginn(epost, passord);
+	public Student loginn(String epost, String passord) throws Exception {
+		Student student = studentDAO.finnVedEpost(epost);
+		if (PasswordUtil.checkPassword(passord, student.getPassord())) {
+			return student;
+		} else {
+			throw new IllegalArgumentException("Passord stemmer ikkje");
+		}
 	}
 	
 

@@ -12,7 +12,7 @@ public class Tilbakemelding {
 	
 	@ManyToOne
 	@JoinColumn(name = "student")
-	private Student student;
+	private String studenthash;
 	
 	@ManyToOne
 	@JoinColumn(name = "forelesning")
@@ -22,8 +22,8 @@ public class Tilbakemelding {
 	private Farge farge;
 	
 	
-	public Tilbakemelding(Student student, Forelesning forelesning, Farge farge) {
-		this.student = student;
+	public Tilbakemelding(String studenthash, Forelesning forelesning, Farge farge) {
+		this.studenthash = studenthash;
 		this.forelesning = forelesning;
 		this.farge = farge;
 	}

@@ -5,9 +5,9 @@ import java.util.List;
 import jakarta.persistence.EntityManager;
 import model.Forelesning;
 
-public class ForelesningDAO implements Dao<Forelesning> {
+public class ForelesningDAO {
 
-	@Override
+
 	public void lagre(Forelesning t) {
 		EntityManager em = JPAUtil.getEntityManager();
 		em.getTransaction().begin();
@@ -17,25 +17,25 @@ public class ForelesningDAO implements Dao<Forelesning> {
 		
 	}
 
-	@Override
+	
 	public Forelesning finnVedId(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public List<Forelesning> finnAlle() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public void slett(Forelesning t) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public void oppdater(Forelesning t) {
 		// TODO Auto-generated method stub
 		
